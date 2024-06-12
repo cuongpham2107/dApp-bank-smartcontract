@@ -3,7 +3,6 @@ import type { PageServerLoad } from './$types';
 import { auth } from "$lib/stores/app";
 
 export const load = (async () => {
-   
     return {};
 }) satisfies PageServerLoad;
 
@@ -23,9 +22,11 @@ export const actions: Actions = {
         }).then(res => res.json()).then(data => data);
        
         if(data) {
-            console.log(data);
             auth.set(data);
             redirect(302, '/');
+        }
+        else {
+            redirect(302, '/auth/login');
         }
     }
 }

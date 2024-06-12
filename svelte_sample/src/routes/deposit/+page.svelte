@@ -1,11 +1,11 @@
 <script lang="ts">
     import type { PageData } from './$types';
+    import { ethers } from "ethers";
     
     export let data: PageData;
-
-    
 </script>
 
 
-<h1>Home</h1>
-
+<div>
+    deposit
+</div>

@@ -3,10 +3,12 @@ import { writable } from "svelte/store";
 export interface Auth {
     accessToken: string;
     user: {
-        id: string;
+        id: number;
+        username: string;
         email: string;
-        name: string;
-        
+        password: string;
+        balance: number;
+        roleId: number;
     };
 }
 
